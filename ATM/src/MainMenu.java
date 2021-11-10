@@ -178,7 +178,7 @@ public class MainMenu extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("AC BANK");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblNewLabel.setBounds(338, 13, 83, 13);
+		lblNewLabel.setBounds(338, 13, 83, 18);
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Select Your Transaction");

@@ -23,6 +23,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JCheckBox;
 
 @SuppressWarnings({ "serial", "unused" })
 public class Auth extends JFrame {
@@ -192,12 +193,25 @@ public class Auth extends JFrame {
 		signupbtn.setFont(new Font("Tahoma", Font.BOLD, 12));
 		signupbtn.setBounds(304, 325, 85, 21);
 		contentPane.add(signupbtn);
+		
+		JCheckBox checkbox = new JCheckBox("Show");
+		checkbox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(checkbox.isSelected()) {
+					 pin_code.setEchoChar((char)0);
+				}else {
+					pin_code.setEchoChar('*');
+				}
+			}
+		});
+		checkbox.setFont(new Font("Tahoma", Font.BOLD, 11));
+		checkbox.setBackground(Color.WHITE);
+		checkbox.setBounds(405, 239, 93, 21);
+		contentPane.add(checkbox);
 		setLocationRelativeTo(null);
 		
 		
 		
 		
 	}
-	
-	
 }
